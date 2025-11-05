@@ -13,7 +13,7 @@ remote server.
 
 !!! warning "Use this command for preview only"
 
-    Note that the web server that is build into Zensical is intended for preview
+    Note that the web server that is built into Zensical is intended for preview
     purposes only. It is not designed for production deployment. We recommend to
     use a dedicated web server like nginx or Apache.
 
