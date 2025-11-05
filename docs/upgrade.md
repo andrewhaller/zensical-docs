@@ -36,7 +36,7 @@ installed Zensical:
 === "with `uv`"
 
     With an existing lock file, uv will [stick to previous versions] until you
-    explicitly upgrade them. Run the following, replacing `<version>´ with the
+    explicitly upgrade them. Run the following, replacing `<version>` with the
     version you want to upgrade to.
 
     ```
