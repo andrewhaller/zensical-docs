@@ -37,7 +37,7 @@ by adding the following to your configuration:
 
     ```toml
     [project.extra.tags]
-    <tag>: <identifier>
+    <tag> = "<identifier>"
     ```
 
 === "`mkdocs.yml`"
@@ -56,7 +56,7 @@ set `compat` as an identifier:
 
     ``` toml
     [project.extra.tags]
-    Compatibility: compat
+    Compatibility = "compat"
     ```
 
 === "`mkdocs.yml`"
@@ -79,8 +79,8 @@ setting:
 
     ```toml
     [project.theme.icon.tag]
-    default: "<icon>"
-    <identifier>: "<icon>"
+    default = "<icon>"
+    <identifier> = "<icon>"
     ```
 
 === "`mkdocs.yml`"
@@ -98,7 +98,7 @@ setting:
     === "`zensical.toml`"
         ```toml
         [project.theme.icon.tag]
-        default: "lucide/hash"
+        default = "lucide/hash"
         html = "fontawesome/brands/html5"
         js = "fontawesome/brands/js"
         css = "fontawesome/brands/css3"
