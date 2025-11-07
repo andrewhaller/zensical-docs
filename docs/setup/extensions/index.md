@@ -117,7 +117,7 @@ extensions are active in your project:
     alternate_style = true
     [project.markdown_extensions.pymdownx.tasklist]
     custom_checkbox = true
-    [project.markdown_extensions.tilde]
+    [project.markdown_extensions.pymdownx.tilde]
     ```
 
 === "`mkdocs.yml`"
