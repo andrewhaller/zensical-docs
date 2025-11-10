@@ -11,7 +11,7 @@ Remember that Zensical uses [semantic versioning], so if you are upgrading
 from one major release version to another, please carefully study the
 information provided on [versioning] of Zensical.
 
-[changelog]: https://github.com/zensical/zensical/blob/master/changelog.md
+[changelog]: https://github.com/zensical/zensical/releases
 [semantic versioning]: https://semver.org/
 [versioning]: #versioning
 
