@@ -321,7 +321,7 @@ The [Highlight] extension adds support for syntax highlighting of code blocks
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.highlight]
+    [project.markdown_extensions.pymdownx.highlight]
     anchor_linenums = true
     [project.markdown_extensions.pymdownx.superfences]
     ```
