@@ -330,21 +330,21 @@ selection to the user's operating system. Add the following lines to your config
         # Palette toggle for automatic mode
         - media: "(prefers-color-scheme)"
           toggle:
-            icon: material/brightness-auto
+            icon: lucide/sun-moon
             name: Switch to light mode
 
         # Palette toggle for light mode
         - media: "(prefers-color-scheme: light)"
           scheme: default # (1)!
           toggle:
-            icon: material/brightness-7
+            icon: lucide/sun
             name: Switch to dark mode
 
         # Palette toggle for dark mode
         - media: "(prefers-color-scheme: dark)"
           scheme: slate
           toggle:
-            icon: material/brightness-4
+            icon: lucide/moon
             name: Switch to system preference
     ```
 
