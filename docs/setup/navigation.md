@@ -24,6 +24,121 @@ Additional navigation can be configured [in the footer].
 
 ## Configuration
 
+By default, Zensical creates the navigation sidebar on the basis of the folder
+structure and content of the Markdown pages. Likewise, it uses a default layout
+that can be overridden using various feature flags described on this page.
+
+### Explicit navigation
+
+If you want to exercise more control over the structure of your navigation, you
+can create an explicit definition of the navigation structure in your
+configuration file. In the simplest case, you simply list the paths to your
+content files, leaving it to Zensical to extract a title for each of them from
+the content itself. The paths need to be relative to the [`docs_dir`][docs_dir].
+
+  [docs_dir]: basics.md#docs_dir
+
+=== "`zensical.toml`"
+
+    ``` toml
+    [project]
+    nav = [
+      "index.md",
+      "about.md"
+    ]
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    nav:
+      - index.md
+      - about.md
+    ```
+
+Instead of letting Zensical figure out the title to use for the navigation entry
+for a page, you can also explicitly specify a title:
+
+=== "`zensical.toml`"
+
+    ``` toml
+    [project]
+    nav = [
+      {"Home" = "index.md"},
+      {"About" = "about.md"}
+    ]
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    nav:
+      - Home: index.md
+      - About: about.md
+    ```
+
+!!! tip "Navigation structure in Zensical vs. Mkdocs"
+    Users of Material for MkDocs or other MkDocs themes may notice that the
+    structure of navigation entries in the `zensical.toml` differs from the
+    structure in the `mkdocs.yml`. This represents a first step towards
+    realizing a more [modular navigation] system in Zensical.
+
+[modular navigation]: https://zensical.org/about/roadmap/#modular-navigation
+
+#### Navigation sections
+
+You can define navigation sections to create a navigation hierarchy that guides
+your users to the information they require.
+
+=== "`zensical.toml`"
+
+      ``` toml
+      [project]
+      nav = [
+        {"Home" = "index.md"},
+        {"About" = [
+           "about/index.md",
+           "about/vision.md",
+           "about/team.md"
+        ]}
+      ]
+      ```
+
+=== "`mkdocs.yml`"
+
+      ``` yaml
+      nav:
+        - Home: index.md
+        - About:
+          - about/index.md
+          - about/vision.md
+          - about/team.md
+      ```
+
+#### External links
+
+Navigation items typically provide a path to a Markdown page. However, any
+string that cannot be resolved to a Markdown page is treated as a URL. 
+
+=== "`zensical.toml`"
+
+      ``` toml
+      [project]
+      nav = [
+        {"GitHub Repo" = "https://github.com/zensical/docs"}
+      ]
+      ```
+
+=== "`mkdocs.yml`"
+
+      ``` yaml
+      nav:
+        - GitHub Repo: https://github.com/zensical/docs
+      ```
+
+The "GitHub Repo" navigation entry takes the user to the repository for the
+Zensical Documentation.
+
 ### Instant navigation
 
 When instant navigation is enabled, clicks on all internal links will be
