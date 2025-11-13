@@ -77,14 +77,6 @@ for a page, you can also explicitly specify a title:
       - About: about.md
     ```
 
-!!! tip "Navigation structure in Zensical vs. Mkdocs"
-    Users of Material for MkDocs or other MkDocs themes may notice that the
-    structure of navigation entries in the `zensical.toml` differs from the
-    structure in the `mkdocs.yml`. This represents a first step towards
-    realizing a more [modular navigation] system in Zensical.
-
-[modular navigation]: https://zensical.org/about/roadmap/#modular-navigation
-
 #### Navigation sections
 
 You can define navigation sections to create a navigation hierarchy that guides
@@ -118,7 +110,7 @@ your users to the information they require.
 #### External links
 
 Navigation items typically provide a path to a Markdown page. However, any
-string that cannot be resolved to a Markdown page is treated as a URL. 
+string that cannot be resolved to a Markdown page is treated as a URL.
 
 === "`zensical.toml`"
 
